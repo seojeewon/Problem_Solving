@@ -17,5 +17,10 @@ add_executable(Problem_Solving
         #2023-08-22
         #복습 BOJ3986.cpp 미결-BOJ5430.cpp
         #BFS: BOJ4179.cpp BOJ1697.cpp BOJ10026.cpp
-        #재귀: BOJ1629.cpp BOJ11729.cpp
-        BOJ1074.cpp)
+        #재귀: BOJ1629.cpp BOJ11729.cpp BOJ1074.cpp
+        #2023-08-23
+        #복습: BOJ1012.cpp 미결-BOJ14956.cpp
+        #티어용: BOJ1978.cpp BOJ1874.cpp BOJ1929.cpp 미결-BOJ1654.cpp
+        #       BOJ2751.cpp BOJ9012.cpp BOJ1546.cpp BOJ10814.cpp(튜플씀) BOJ4153.cpp
+        BOJ10989.cpp
+)
