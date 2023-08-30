@@ -21,6 +21,21 @@ add_executable(Problem_Solving
         #2023-08-23
         #복습: BOJ1012.cpp 미결-BOJ14956.cpp
         #티어용: BOJ1978.cpp BOJ1874.cpp BOJ1929.cpp 미결-BOJ1654.cpp
-        #       BOJ2751.cpp BOJ9012.cpp BOJ1546.cpp BOJ10814.cpp(튜플씀) BOJ4153.cpp
-        BOJ10989.cpp
+        #       BOJ2751.cpp BOJ9012.cpp BOJ1546.cpp BOJ10814.cpp(튜플씀) BOJ4153.cpp BOJ10989.cpp
+        #2023-08-24
+        #미결-BOJ11967.cpp
+        #2023-08-25
+        #미결-BOJ4889.cpp
+        #2023-08-26
+        #백트래킹-N과 M: BOJ15649.cpp BOJ15650.cpp
+        #       BOJ9663.cpp BOJ1182.cpp
+        #2023-08-28
+        #next_permutation: BOJ15649_1.cpp
+        #2023-08-29
+        #next_permutation: BOJ15650_1.cpp BOJ15654_1.cpp
+        #N과 M: BOJ15651.cpp BOJ15652.cpp BOJ15654.cpp BOJ15655.cpp BOJ15656.cpp
+        #정렬: BOJ11728.cpp
+        #2023-08-30
+        BOJ15657.cpp
+        BOJ15663.cpp
 )
