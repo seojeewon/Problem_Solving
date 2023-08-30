@@ -36,6 +36,8 @@ add_executable(Problem_Solving
         #N과 M: BOJ15651.cpp BOJ15652.cpp BOJ15654.cpp BOJ15655.cpp BOJ15656.cpp
         #정렬: BOJ11728.cpp
         #2023-08-30
-        BOJ15657.cpp
-        BOJ15663.cpp
+        #N과 M: BOJ15657.cpp BOJ15663.cpp
+        #BFS BOJ13549.cpp
+        #BOJ1003.cpp BOJ1463.cpp BOJ1764.cpp BOJ7569.cpp BOJ1620.cpp
+        BOJ14940.cpp
 )
