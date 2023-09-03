@@ -43,5 +43,7 @@ add_executable(Problem_Solving
         #미결- BOJ6064.cpp
         #BOJ15664.cpp BOJ9095.cpp BOJ11723.cpp BOJ11726.cpp BOJ11727.cpp BOJ17219.cpp BOJ18870.cpp BOJ2667.cpp BOJ11047.cpp
         #2023-09-01
-        BOJ11399.cpp
+        #BOJ11399.cpp
+        BOJ1920.cpp
+        BOJ5597.cpp
 )
