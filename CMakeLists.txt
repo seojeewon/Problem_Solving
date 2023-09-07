@@ -51,5 +51,8 @@ add_executable(Problem_Solving
         #BOJ15683.cpp-미결
         #2023-09-04
         #BOJ7562.cpp
-        BOJ2577.cpp
+        #2023-09-05
+        #BOJ2577.cpp
+        #2023-09-06
+        BOJ2493.cpp
 )
