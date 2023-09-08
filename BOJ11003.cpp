@@ -1,39 +1,34 @@
-//2023-08-20.
+//2023-09-07.
 #include "bits/stdc++.h"
 
 using namespace std;
-
-int D[5000006];
-
-int findMin(deque<int> &dq, int start, int end){
-    int min = 1000000003;
-    for(auto iter = dq.begin()+start ; iter!=dq.begin()+end+1 ; iter++){
-        if(*iter<min)
-            min = *iter;
-    }
-    return min;
-}
 
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
-    int n, l, tmp;
-    cin >> n >> l;
-
-    deque<int> dq;
-    for (int i = 0; i < n; i++) {   // A 입력
-        cin >> tmp;
-        dq.push_back(tmp);
+    int n, l;
+    cin>>n>>l;
+    vector<int> v(n,0);
+    deque<int> deq;
+    for(int i=0;i<n;i++) cin>>v[i];
+    int min=v[0];
+    deq.push_back(v[0]);
+    cout<<min<<' ';
+    for(int i=1;i<l;i++){
+        deq.push_back(v[i]);
+        if(v[i]<min) min=v[i];
+        cout<<min<<' ';
     }
-
-    for (int i = 1; i <= n; i++) {
-        if (i - l + 1 >= 0) {
-            //D[i] = *min_element(dq.begin() + (i - l + 1), dq.begin() + (i+1));
-            D[i]= findMin(dq, i-l+1, i);
-        } else {
-            D[i] = findMin(dq, 0, i);
+    for(int i=l;i<n;i++){
+        if(deq.front()==min){
+            deq.pop_front();
+            deq.push_back(v[i]);
+            ;
+        } else{
+            deq.pop_front();
+            deq.push_back(v[i]);
+            if(v[i]<min) min=v[i];
         }
-        cout << D[i] << ' ';
     }
 }
