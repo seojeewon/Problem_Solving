@@ -67,6 +67,18 @@ add_executable(Problem_Solving
         #별찍기-BOJ2444.cpp BOJ2445.cpp BOJ2443.cpp BOJ2442.cpp BOJ2441.cpp BOJ2440.cpp
         #BOJ11650.cpp BOJ2750.cpp BOJ11651.cpp BOJ11931.cpp BOJ15688.cpp
         #2023-09-12
-        #BOJ1431.cpp
-        BOJ11652.cpp
+        #BOJ1431.cpp BOJ11652.cpp BOJ5648.cpp
+        #2023-09-15
+        #BOJ2468.cpp BOJ2644.cpp BOJ14503.cpp
+        #2023-09-17
+        #BOJ2490.cpp
+        #2023-09-18
+        #BOJ9205.cpp
+        #BOJ2576.cpp
+        #2023-09-19
+        #BOJ15683.cpp
+        #BOJ18808.cpp
+        #2023-09-21
+        #BOJ2480.cpp
+        BOJ12100.cpp
 )
