@@ -81,6 +81,8 @@ add_executable(Problem_Solving
         #2023-09-21
         #BOJ2480.cpp BOJ12100.cpp
         #2023-09-22
-        #BOJ10804.cpp
-        BOJ1267.cpp
+        #BOJ10804.cpp BOJ1267.cpp
+        #2023-09-23
+        #BOJ15686.cpp BOJ3190.cpp
+        BOJ14891.cpp
 )
