@@ -91,7 +91,8 @@ add_executable(Problem_Solving
         #2023-09-28
         #BOJ11055.cpp BOJ11053.cpp BOJ10825.cpp BOJ17484.cpp
         #2023-10-06
-        #투포인터: BOJ2230.cpp
-        BOJ1806.cpp
-        "P연속된 부분 수열의 합.cpp"
+        #투포인터: BOJ2230.cpp BOJ1806.cpp "P연속된 부분 수열의 합.cpp"
+        #2023-10-07
+        #그리디: BOJ1931.cpp BOJ2217.cpp BOJ1026.cpp
+        CT_포탑부수기.cpp
 )
