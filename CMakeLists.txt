@@ -94,5 +94,7 @@ add_executable(Problem_Solving
         #투포인터: BOJ2230.cpp BOJ1806.cpp "P연속된 부분 수열의 합.cpp"
         #2023-10-07
         #그리디: BOJ1931.cpp BOJ2217.cpp BOJ1026.cpp
-        CT_포탑부수기.cpp
+        # CT_포탑부수기.cpp CT_토끼와경주.cpp "CT_메이즈러너.cpp"
+        #c++split.cpp
+        SWEA1926.cpp
 )
