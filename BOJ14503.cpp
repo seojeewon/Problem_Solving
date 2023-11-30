@@ -1,68 +1,67 @@
-//2023-09-15.
+//2023-11-20.
 #include "bits/stdc++.h"
 
 using namespace std;
-int n, m, ans;
-int board[55][55];
-bool vis[55][55];
-int dx[4] = {1, 0, -1, 0}; //남->서->북->동
-int dy[4] = {0, -1, 0, 1};
+int n,m;    //방의 크기
+int room[55][55];   //방, 0: 청소되지 않은 빈칸, 1: 벽
+pair<int,int> cleaner;  //청소기 위치
+int dir;    //청소기가 바라보는 방향
+int dx[4]={-1,0,1,0};   //북동남서 순서
+int dy[4]={0,1,0,-1};
 
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    cin >> n >> m;
-    int r, c, d;
-    cin >> r >> c >> d;
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++) {
-            cin >> board[i][j];
-        }
-    //처음 시작 좌표
-    vis[r][c] = 1;  //방문 표시
-    ans++;  //청소한 지역++
-    stack<pair<int, int>> s;
-    s.push({r, c});
-    int dir = (d + 2) % 4;  //처음 위치
-    bool flag = false;  //4칸 중 청소되지 않은 빈칸이 있으면 o
-    while (true) {
-        int i = 0;  //방향키
-        auto cur = s.top();
-        if(!vis[cur.first][cur.second]){    //2-2의 경우
-            vis[cur.first][cur.second]=1;
-            ans++;
-        }
-        while (true) {    //4칸 청소 여부 보기
-            flag = false;
-            int nx = cur.first + dx[dir];
-            int ny = cur.second + dy[dir];
-            if (nx < 0 || nx >= n || ny < 0 || ny >= m) {
-                if(i==3) break;
-                //범위 벗어난 경우
-                i++;
-                dir = (dir + 1) % 4;
-                continue;
-            }
-            if (vis[nx][ny] || board[nx][ny] == 1) {    //이미 청소한 곳이거나 벽
-                if(i==3) break;
-                i++;
-                dir = (dir + 1) % 4;
-                continue;
-            }
-            //청소 안한 빈칸
-            s.push({nx, ny});
-            flag = true;
-            dir=(dir+1)%4;
-            break;
-        }
-        if (flag) continue;
-        //네칸중 청소되지 않은 빈 칸이 없음
-        if (board[cur.first + dx[(dir + 2) % 4]][cur.second + dy[(dir + 2) % 4]] == 1) {
-            cout << ans;
-            return 0;
-        } else {
-            s.push({cur.first + dx[(dir + 2) % 4], cur.second + dy[(dir + 2) % 4]});
+
+    //입력
+    cin>>n>>m;
+    cin>>cleaner.first>>cleaner.second;
+    cin>>dir;
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>room[i][j];
         }
     }
 
+    int ans=0;  //청소하는 영역의 개수
+    while(true){
+        //1. 현재 칸이 청소되지 않은 경우, 현재 칸 청소
+        if(room[cleaner.first][cleaner.second]==0){
+            ans++;
+            room[cleaner.first][cleaner.second]=2;  //청소를 완료한 칸은 2
+        }
+        //2. 현재 칸의 주변 4칸 중 청소되지 않은 빈칸이 있는지 확인(반시계)
+        bool isExist = false;
+
+        for(int i=3;i<=12;i=i+3){
+            int nx = cleaner.first+dx[(dir+i)%4];
+            int ny = cleaner.second+dy[(dir+i)%4];
+            if(nx>=n||nx<0||ny>=m||ny<0) continue;
+            //청소되지 않은 칸이 존재
+            if(room[nx][ny]==0){
+                isExist=true;
+                dir=(dir+i)%4;
+                break;
+            }
+
+        }
+        if(isExist){
+            cleaner={cleaner.first+dx[dir], cleaner.second+dy[dir]};
+            continue;
+        }
+        else{
+            if(cleaner.first-dx[dir]<0||cleaner.first-dx[dir]>=n||cleaner.second-dy[dir]<0||cleaner.second-dy[dir]>=m){
+                break;
+            }
+            if(room[cleaner.first-dx[dir]][cleaner.second-dy[dir]]==1){
+                break;
+            }
+            //후진
+            cleaner={cleaner.first-dx[dir], cleaner.second-dy[dir]};
+            continue;
+        }
+    }
+
+    cout<<ans;
 }

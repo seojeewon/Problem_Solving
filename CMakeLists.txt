@@ -96,5 +96,10 @@ add_executable(Problem_Solving
         #그리디: BOJ1931.cpp BOJ2217.cpp BOJ1026.cpp
         # CT_포탑부수기.cpp CT_토끼와경주.cpp "CT_메이즈러너.cpp"
         #c++split.cpp
-        SWEA1926.cpp
+        #SWEA1926.cpp
+        #2023-11-20솦티 대비
+        #BOJ14501.cpp BOJ14503.cpp BOJ11003.cpp
+        #솦티
+        #H4.cpp H6.cpp H7.cpp H1.cpp H5.cpp H3.cpp
+        BOJ11724.cpp
 )
