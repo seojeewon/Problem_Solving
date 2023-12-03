@@ -101,5 +101,6 @@ add_executable(Problem_Solving
         #BOJ14501.cpp BOJ14503.cpp BOJ11003.cpp
         #솦티
         #H4.cpp H6.cpp H7.cpp H1.cpp H5.cpp H3.cpp
-        BOJ11724.cpp
+        #BOJ11724.cpp
+        BOJ1260.cpp
 )
